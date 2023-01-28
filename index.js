@@ -1,7 +1,7 @@
 const express = require('express')
 const mongodb = require('mongodb')
 const mongoClient = mongodb.MongoClient
-const URL = 'mongodb+srv://admin:admin123@cluster0.j6kbytn.mongodb.net/'
+const URL = `mongodb+srv://${process.env.MONGO_USER_NAME}:${process.env.MONGO_USER_PASSWORD}@cluster0.j6kbytn.mongodb.net/`
 
 const cors = require('cors')
 const app = express()
